@@ -3,9 +3,12 @@
 <suite name="All Test Suite">
 <!--    <test verbose="2" preserve-order="true"  parallel="methods" thread-count="2" name="ATB12xSeleniumAdvanceFramework">
         Avoid using parallelism with static Driver         -->
+    <listeners>
+        <listener class-name="com.thetestingacademy.listeners.RetryListener"></listener>
+    </listeners>
     <test verbose="2" preserve-order="true"   name="ATB12xSeleniumAdvanceFramework">
         <classes>
-            <class name="com.thetestingacademy.tests.PageObjectModel_Test.vwo.TestVWOLogin_01_NormalScript_POM">
+            <class name="com.thetestingacademy.tests.PageObjectModel_Test.vwo.TestVWOLogin_03_Retry">
             </class>
         </classes>
     </test>
