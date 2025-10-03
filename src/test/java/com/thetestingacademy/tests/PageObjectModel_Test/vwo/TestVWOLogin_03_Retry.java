@@ -2,6 +2,7 @@ package com.thetestingacademy.tests.PageObjectModel_Test.vwo;
 
 import com.thetestingacademy.base.CommonToAllTest;
 import com.thetestingacademy.listeners.RetryAnalyzer;
+import com.thetestingacademy.listeners.ScreenshotListener;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
@@ -14,6 +15,7 @@ import org.testng.annotations.Test;
 
 import static com.thetestingacademy.driver.DriverManager.getDriver;
 
+@Listeners(ScreenshotListener.class)
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestVWOLogin_03_Retry extends CommonToAllTest {
     private static final Logger logger = LogManager.getLogger(TestVWOLogin_03_Retry.class);
